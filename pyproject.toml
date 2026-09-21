@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "report-builder-ai-ipynb"
+version = "0.1.0"
+description = "Production-oriented notebook output to professional PDF/DOCX reports with audience modes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "report-builder contributors" }]
+dependencies = [
+  "reportlab>=4.2.0",
+  "python-docx>=1.1.2",
+]
+
+[project.scripts]
+report-builder = "report_builder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["report_builder*"]
