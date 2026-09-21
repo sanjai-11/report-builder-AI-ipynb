@@ -1,0 +1,2 @@
+[console_scripts]
+report-builder = report_builder.cli:main
